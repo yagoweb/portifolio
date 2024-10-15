@@ -1,0 +1,105 @@
+*{   /*seletor universal */
+    margin: 0; /* zerando margin do navegador*/
+    padding: 0; /* zerando padding do navegador*/
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./Dark\ mode.jpg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./bg-mobile-light.jpg );
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover; /* chama a imagem para aparecer na tela*/
+}
+
+body * {
+    font-family: "Inter", sans-serif; /*fonte dos textos da página*/
+    color: var(--text-color); /* cor dos textos*/
+}
+
+#container {
+    width: 360px; /* largura da caixa para não ficar tão grande*/
+    margin: 56px auto 0px; /* margin para todos os lados 56px - desgrudar a imagem de cima auto - as laterais 0px- em baixo */
+
+}
+
+#profile {
+    text-align: center; /* deixar a imagem no centro da caixa*/
+    padding: 24px; /* preechimento para todos os lados*/
+}
+
+#profile img {
+    width: 112px; /* para diminuir a minha imagem*/
+}
+
+#profile p {
+    font-weight: 500; /* para deixar mais em negrito o texto*/
+    line-height: 24px; /* altura da linha do texto*/
+    margin-top: 8px; /* espaço entre a foto e o @ */
+}
+
+ul {
+    list-style: none; /* tirar os pontinho da lista*/
+
+    display: flex; /* ocupar todo espaço disponível*/
+    flex-direction: column; /*para ficar centralizado alinhados */
+    gap: 16px; /* para ter espaçamento entre as ul e li*/
+    padding: 24px 0
+}
+
+ul li a {
+    display: flex; /* ocupar todo espaço disponível*/
+    align-items: center; /* alinhar os elementos da lista ao meio */
+    justify-content: center;/* alinhar todos elementos da lista ao meio*/
+
+    padding: 16px 24px; /* aumenta a caixa para os lados e para cima e baixo*/
+    
+    background: rgba(255, 255, 255, 0.1); /* a cor dos elementos de cinza*/
+    border: 1px solid rgba(255, 255, 255, 0.5); /* cor das bordas*/
+    border-radius: 8px; /* para deixar as bordas arredondadas*/
+    backdrop-filter: blur(4px) ;  /* para deixar o fundo embacado*/
+    -webkit-backdrop-filter: blur(4px) ; /* prefixo que alguns browser que vão liberar*/                                                                                                                                                             
+    text-decoration: none; /* tirar sublinhaado do texto*/
+    font-weight: bold; /* para os textos*/
+    transition: background 0.2s; /* para ter uma transição mais suave*/
+}
+
+ul li a:hover  { /* :hover para da transição quando passar o mouse por cima de algo do site*/
+    background: rgba( 255, 255, 255, 0.05);
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+    display: flex; /* aplicar o display flex para o justify content funcionar*/
+    justify-content: center; /* deixar os icones mais centralizado*/
+    gap : 32px; /* causar uma distância considerável enre os icones*/
+    padding: 24px 0; /* distância entre as caixa dos links e os icones*/
+    font-size: 40px; /* aumentar os icones*/
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+
+#social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
